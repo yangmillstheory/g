@@ -1,8 +1,7 @@
 > Google from the command line
 
 <p align="center">
-  <img src='https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif'>
-  <img src='https://user-images.githubusercontent.com/2729079/32401911-70d8b954-c0d6-11e7-81ad-bba7f38b3d97.gif'>
+  <img width=600 height=600 src='https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif'>
 </p>
 
 ### Install
