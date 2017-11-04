@@ -27,7 +27,10 @@ if __name__ == '__main__':
     Usage:
 
         # preserve double-quotes and run in verbose mode
-        $ g -v '"Black Mirror" review'
+        $ g -v '"Stranger Things 2" review'
+
+        # standard invocation
+        $ g black mirror season 4 release date
     """
     p = argparse.ArgumentParser('query')
     p.add_argument(
