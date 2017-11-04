@@ -15,7 +15,7 @@ Clone the repository and put `bin/g` somewhere in your `$PATH`.
 $ g -v '"Black Mirror" review'
 
 # issue a standard search query in non-verbose mode
-$ g 'Stranger Things 2'
+$ g Stranger Things 2
 ```
 
 ### FAQ
