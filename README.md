@@ -25,3 +25,7 @@ $ g 'Stranger Things 2'
 If there's interest or I'm bored enough, sure.
 
 For now I just sync this into `$HOME/.bin` - which lies in my `$PATH` - manually using a script in my dotfiles repository.
+
+> What about [`googler`](https://github.com/jarun/googler)?
+
+It's nice, but did too much for what I wanted.
