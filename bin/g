@@ -41,8 +41,7 @@ if __name__ == '__main__':
         logger.error('Expected search query; got nothing.')
         os._exit(1)
     query = ' '.join(query)
-    logger.debug('raw query: {}'.format(query))
+    logger.debug('raw: {}'.format(query))
     query = urllib.parse.quote_plus(query)
-    logger.debug('use query: {}'.format(query))
-    webbrowser.open_new_tab(
-        'https://www.google.com/search?q={}'.format(query))
+    logger.debug('enc: {}'.format(query))
+    webbrowser.open_new_tab('https://www.google.com/search?q={}'.format(query))
