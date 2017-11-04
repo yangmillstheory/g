@@ -1,0 +1,49 @@
+#! /usr/local/bin/python3
+import argparse
+import logging
+import os
+import urllib.parse
+import webbrowser
+
+logger = logging.getLogger(__name__)
+
+
+def _configure_logging(nspace):
+    '''Configures the logging module based on command line arguments.
+
+    :param nspace: an instance of Namespace; see
+                   https://docs.python.org/2/library/argparse.html#argparse.Namespace
+    '''
+    if nspace.verbose:
+        level = logging.DEBUG
+    else:
+        level = logging.INFO
+    logging.basicConfig(level=level, format='%(message)s')
+
+
+if __name__ == '__main__':
+    """Open a Google search query in a new browser tab.
+
+    Usage:
+
+        # preserve double-quotes and run in verbose mode
+        $ g -v '"Black Mirror" review'
+    """
+
+    p = argparse.ArgumentParser('query')
+    p.add_argument(
+        'query', nargs='*', help='string search query, will be URL encoded')
+    p.add_argument(
+        '-v', '--verbose', action='store_true', help='verbose mode')
+    nspace = p.parse_args()
+    _configure_logging(nspace)
+    query = nspace.query
+    if not query:
+        logger.error('Expected search query; got nothing.')
+        os._exit(1)
+    query = ' '.join(query)
+    logger.debug('raw query: {}'.format(query))
+    query = urllib.parse.quote_plus(query)
+    logger.debug('use query: {}'.format(query))
+    webbrowser.open_new_tab(
+        'https://www.google.com/search?q={}'.format(query))
