@@ -22,4 +22,4 @@ $ g 'Stranger Things 2'
 
 If there's interest or I'm bored enough, sure.
 
-For now I just sync this into `$HOME/.bin` - which lives in my `$PATH` - manually using a script in my dotfiles repository. Keep it simple.
+For now I just sync this into `$HOME/.bin` - which lies in my `$PATH` - manually using a script in my dotfiles repository.
