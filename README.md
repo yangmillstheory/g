@@ -1,6 +1,17 @@
+## g
+
 > Google from the command line
 
 ![g](https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif)
+
+### Requirements
+
+Python 3. Well, not really, but why not?
+
+```
+$ brew install python3
+$ which python3
+```
 
 ### Install
 
