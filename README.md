@@ -1,8 +1,9 @@
-# g
-
 > Google from the command line
 
-![g](https://user-images.githubusercontent.com/2729079/32401879-9047a904-c0d5-11e7-9e27-8b51fa4d7f7b.gif)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif'>
+  <img src='https://user-images.githubusercontent.com/2729079/32401911-70d8b954-c0d6-11e7-81ad-bba7f38b3d97.gif'>
+</p>
 
 ### Install
 
