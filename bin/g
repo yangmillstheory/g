@@ -29,7 +29,6 @@ if __name__ == '__main__':
         # preserve double-quotes and run in verbose mode
         $ g -v '"Black Mirror" review'
     """
-
     p = argparse.ArgumentParser('query')
     p.add_argument(
         'query', nargs='*', help='string search query, will be URL encoded')
