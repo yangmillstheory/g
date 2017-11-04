@@ -2,7 +2,7 @@
 
 > Google from the command line
 
-![g](https://user-images.githubusercontent.com/2729079/32401793-a9ce60e0-c0d3-11e7-9634-ee441b956c19.gif)
+![g](https://user-images.githubusercontent.com/2729079/32401843-c457bf00-c0d4-11e7-8066-7c5edb7e9f9b.gif)
 
 ### Install
 
