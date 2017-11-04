@@ -2,6 +2,8 @@
 
 > Google from the command line
 
+![g](https://user-images.githubusercontent.com/2729079/32401793-a9ce60e0-c0d3-11e7-9634-ee441b956c19.gif)
+
 ### Install
 
 Clone the repository and put `bin/g` somewhere in your `$PATH`.
