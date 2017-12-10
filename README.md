@@ -2,8 +2,6 @@
 
 > Google from the command line
 
-![g](https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif)
-
 ### Requirements
 
 Python 3. Well, not really, but why not?
@@ -19,7 +17,7 @@ Clone the repository and put `bin/g` somewhere in your `$PATH`.
 
 ### Usage
 
-From the command line:
+#### Command line
 
 ```
 # preserve double-quotes and run in verbose mode
@@ -29,7 +27,11 @@ $ g -v '"Black Mirror" review'
 $ g Stranger Things 2
 ```
 
-Use in Vim (Visual, Normal, or Operator-pending modes supported):
+![g](https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif)
+
+#### Vim
+
+Put the following in your `~/.vimrc`.
 
 ```vim
 function! s:Google(type)
@@ -55,6 +57,18 @@ vnoremap <F2> :<c-u>call <SID>Google(visualmode())<cr>
 nnoremap <F2> :set operatorfunc=<SID>Google<cr>g@
 nnoremap <F2><F2> :silent !g <c-r><c-w><cr>
 ```
+
+Visual:
+
+![g-v](https://user-images.githubusercontent.com/2729079/33801406-55ac047e-dd0f-11e7-925d-81c524591dc5.gif)
+
+Operating-pending:
+
+![g-o](https://user-images.githubusercontent.com/2729079/33801394-0258c65e-dd0f-11e7-9b18-67623875bafb.gif)
+
+Normal:
+
+![g-n](https://user-images.githubusercontent.com/2729079/33801418-ab28da44-dd0f-11e7-9d20-dd40992239d5.gif)
 
 ### FAQ
 
