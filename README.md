@@ -43,7 +43,9 @@ Now you can search from `vim` in visual, normal, and operator-pending modes :).
 
 ### Development
 
-Edit
+1. Edit `g.go`.
+1. `make build`.
+1. Play with `bin/g`.
 
 ### FAQ
 
