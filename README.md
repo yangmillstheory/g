@@ -12,6 +12,7 @@ $ chmod +x /usr/local/bin/g
 ```
 ### Usage
 
+```
 👌 ~/c/g [65012fd] (master⚡)
 (i) g -help
 Usage of ./bin/g:
@@ -22,6 +23,7 @@ Usage of ./bin/g:
   -w    Search Google. (default true)
   -yt
         Search YouTube.
+```
 
 #### Shell
 
