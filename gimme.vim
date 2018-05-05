@@ -1,4 +1,4 @@
-function! s:Google(type)
+function! s:Gimme(type)
   let saved = @@
   if a:type ==# 'V'
     normal! `<V`>y
@@ -12,11 +12,11 @@ function! s:Google(type)
   " remove trailing newline
   "
   "   https://stackoverflow.com/a/6228454
-  let @@ = substitute(strtrans(@@), '\^@', '', 'g')
-  call system('g ' . shellescape(@@))
+  let @@ = substitute(strtrans(@@), '\^@', '', 'gimme')
+  call system('gimme ' . shellescape(@@))
   let @@ = saved
 endfunction
 
-vnoremap <F2> :<c-u>call <SID>Google(visualmode())<cr>
-nnoremap <F2> :set operatorfunc=<SID>Google<cr>g@
+vnoremap <F2> :<c-u>call <SID>Gimme(visualmode())<cr>
+nnoremap <F2> :set operatorfunc=<SID>Gimme<cr>g@
 nnoremap <F2><F2> :silent !g <c-r><c-w><cr>

@@ -1,6 +1,6 @@
 # gimme
 
-> Search Google Maps, Videos, Images, or YouTube from the command line
+> Maps, videos, images, and YouTube from the command line
 
 ## Install
 
