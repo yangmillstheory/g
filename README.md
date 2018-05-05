@@ -37,7 +37,7 @@ $ gimme -m -w=false pizza
 
 ### Vim
 
-Put [this](g.vim) in your `.vimrc`.
+Put [this](gimme.vim) in your `.vimrc`.
 
 Now you can search from `vim` in visual, normal, and operator-pending modes :).
 
