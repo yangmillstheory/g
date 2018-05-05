@@ -15,7 +15,7 @@ $ chmod +x /usr/local/bin/gimme
 ```
 👌 ~/c/g [65012fd] (master⚡)
 (i) gimme -help
-Usage of ./bin/g:
+Usage of ./bin/gimme:
   -d    Enable debug logging.
   -i    Search Google Images.
   -m    Search Google Maps.
