@@ -1,20 +1,20 @@
-## g
+# gimme
 
 > Search Google Maps, Videos, Images, or YouTube from the command line
 
-### Install
+## Install
 
-Clone the repository and put `bin/g` somewhere in your `$PATH`, e.g.
+Clone the repository and put `bin/gimme` somewhere in your `$PATH`, e.g.
 
 ```
-$ curl -s https://raw.githubusercontent.com/yangmillstheory/g/master/bin/g -o /usr/local/bin/g
-$ chmod +x /usr/local/bin/g
+$ curl -s https://raw.githubusercontent.com/yangmillstheory/g/master/bin/gimme -o /usr/local/bin/gimme
+$ chmod +x /usr/local/bin/gimme
 ```
-### Usage
+## Usage
 
 ```
 👌 ~/c/g [65012fd] (master⚡)
-(i) g -help
+(i) gimme -help
 Usage of ./bin/g:
   -d    Enable debug logging.
   -i    Search Google Images.
@@ -25,30 +25,34 @@ Usage of ./bin/g:
         Search YouTube.
 ```
 
-#### Shell
+### Shell
 
 ```
 # images, videos, youtube, web
-$ g -i -v -y '"Black Mirror Season 4" review'
+$ gimme -i -v -y '"Black Mirror Season 4" review'
 
 # maps, no web search
-$ g -m -w=false pizza
+$ gimme -m -w=false pizza
 ```
 
-#### Vim
+### Vim
 
 Put [this](g.vim) in your `.vimrc`.
 
 Now you can search from `vim` in visual, normal, and operator-pending modes :).
 
-### Development
+## Development
 
-1. Edit `g.go`.
+1. Edit `gimme.go`.
 1. `make build`.
-1. Play with `bin/g`.
+1. Play with `bin/gimme`.
 
-### FAQ
+## FAQ
 
 > What about [`googler`](https://github.com/jarun/googler)?
 
 It's nice, but did too much for what I wanted.
+
+## Limitations
+
+The program is Darwin-only. This can be fixed by using [pkg/browser](https://godoc.org/github.com/pkg/browser).
