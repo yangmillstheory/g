@@ -7,7 +7,7 @@
 Clone the repository and put `bin/gimme` somewhere in your `$PATH`, e.g.
 
 ```
-$ curl -s https://raw.githubusercontent.com/yangmillstheory/g/master/bin/gimme -o /usr/local/bin/gimme
+$ curl -s https://raw.githubusercontent.com/yangmillstheory/gimme/master/bin/gimme -o /usr/local/bin/gimme
 $ chmod +x /usr/local/bin/gimme
 ```
 ## Usage
