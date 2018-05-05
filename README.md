@@ -1,33 +1,37 @@
 ## g
 
-> Google from the command line
-
-### Requirements
-
-Python 3. Well, not really, but why not?
-
-```
-$ brew install python3
-$ which python3
-```
+> Search Google Maps, Videos, Images, or YouTube from the command line
 
 ### Install
 
-Clone the repository and put `bin/g` somewhere in your `$PATH`.
+Clone the repository and put `bin/g` somewhere in your `$PATH`, e.g.
 
+```
+$ curl -s https://raw.githubusercontent.com/yangmillstheory/g/master/bin/g -o /usr/local/bin/g
+$ chmod +x /usr/local/bin/g
+```
 ### Usage
 
-#### Command line
+👌 ~/c/g [65012fd] (master⚡)
+(i) g -help
+Usage of ./bin/g:
+  -d    Enable debug logging.
+  -i    Search Google Images.
+  -m    Search Google Maps.
+  -v    Search Google Videos.
+  -w    Search Google. (default true)
+  -yt
+        Search YouTube.
+
+#### Shell
 
 ```
-# preserve double-quotes and run in verbose mode
-$ g -v '"Black Mirror" review'
-
-# issue a standard search query in non-verbose mode
-$ g Stranger Things 2
+$ g -images -videos -youtube '"Black Mirror Season 4" review'
 ```
 
-![g](https://user-images.githubusercontent.com/2729079/32401909-6683f82e-c0d6-11e7-9d29-7301f84c0ef8.gif)
+```
+$ g -maps -noweb pizza
+```
 
 #### Vim
 
@@ -58,25 +62,9 @@ nnoremap <F2> :set operatorfunc=<SID>Google<cr>g@
 nnoremap <F2><F2> :silent !g <c-r><c-w><cr>
 ```
 
-Visual:
-
-![g-v](https://user-images.githubusercontent.com/2729079/33801406-55ac047e-dd0f-11e7-925d-81c524591dc5.gif)
-
-Operating-pending:
-
-![g-o](https://user-images.githubusercontent.com/2729079/33801394-0258c65e-dd0f-11e7-9b18-67623875bafb.gif)
-
-Normal:
-
-![g-n](https://user-images.githubusercontent.com/2729079/33801418-ab28da44-dd0f-11e7-9d20-dd40992239d5.gif)
+Now you can search from `vim` in visual, normal, and operator-pending modes :).
 
 ### FAQ
-
-> Will this ever be published on PIP, Homebrew, or as a Vim plugin?
-
-If there's interest or I'm bored enough, sure.
-
-For now I just sync this into `$HOME/.bin` - which lies in my `$PATH` - manually using a script in my dotfiles repository.
 
 > What about [`googler`](https://github.com/jarun/googler)?
 
