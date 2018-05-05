@@ -4,7 +4,7 @@
 
 ## Install
 
-Clone the repository and put `bin/gimme` somewhere in your `$PATH`, e.g.
+Put the program `bin/gimme` somewhere in your `$PATH`, e.g.
 
 ```
 $ curl -s https://raw.githubusercontent.com/yangmillstheory/gimme/master/bin/gimme -o /usr/local/bin/gimme
