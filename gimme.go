@@ -10,8 +10,6 @@ import (
 	"sync"
 )
 
-const maxRoutines = 4
-
 var (
 	debug = flag.Bool("d", false, "Enable debug logging.")
 	yt    = flag.Bool("yt", false, "Search YouTube.")
@@ -37,10 +35,7 @@ var qskeys = map[*bool]string{
 	gw: "q",
 }
 
-type queryData struct {
-	url      string
-	querykey string
-}
+var maxRoutines = len(urls)
 
 func main() {
 	flag.Parse()
