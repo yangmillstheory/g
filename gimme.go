@@ -35,8 +35,6 @@ var qskeys = map[*bool]string{
 	gw: "q",
 }
 
-var maxRoutines = len(urls)
-
 func main() {
 	flag.Parse()
 	args := flag.Args()
@@ -48,10 +46,8 @@ func main() {
 		log.Printf("Searching for: %v", args)
 	}
 
-	var (
-		errc = make(chan error, maxRoutines)
-		wg   sync.WaitGroup
-	)
+	var wg sync.WaitGroup
+	errc := make(chan error, len(urls))
 
 	query := strings.Join(args, " ")
 
@@ -74,19 +70,16 @@ func main() {
 func search(flag *bool, query string, errc chan<- error, wg *sync.WaitGroup) {
 	defer wg.Done()
 
-	var err error
-
 	rawurl := urls[flag]
 	endurl, err := getFinalURL(rawurl, qskeys[flag], query)
 
 	if err != nil {
-		errc <- fmt.Errorf("parsing url %s: %v", rawurl, err)
+		errc <- err
 		return
 	}
 	if *debug {
-		log.Printf("Using URL %v\n", *endurl)
+		log.Printf("searching with URL %v\n", *endurl)
 	}
-
 	//FIXME not portable and works for Darwin only
 	cmd := exec.Command("open", *endurl)
 	if err = cmd.Start(); err != nil {
@@ -97,7 +90,7 @@ func search(flag *bool, query string, errc chan<- error, wg *sync.WaitGroup) {
 func getFinalURL(rawurl, qskey string, query string) (*string, error) {
 	p, err := url.Parse(rawurl)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("parsing url %s: %v", rawurl, err)
 	}
 
 	qs := p.Query()
