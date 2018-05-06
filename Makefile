@@ -1,2 +1,2 @@
-build: gimme.go
-	@go build -o bin/gimme $<
+build: s.go
+	@go build -o bin/s $<

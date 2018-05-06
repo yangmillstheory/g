@@ -1,21 +1,21 @@
-# gimme
+# s
 
 > Maps, videos, images, and YouTube from the command line
 
 ## Install
 
-Put the program `bin/gimme` somewhere in your `$PATH`, e.g.
+Put the program `bin/s` somewhere in your `$PATH`, e.g.
 
 ```
-$ curl -s https://raw.githubusercontent.com/yangmillstheory/gimme/master/bin/gimme -o /usr/local/bin/gimme
-$ chmod +x /usr/local/bin/gimme
+$ curl -s https://raw.githubusercontent.com/yangmillstheory/s/master/bin/s -o /usr/local/bin/s
+$ chmod +x /usr/local/bin/s
 ```
 ## Usage
 
 ```
 👌 ~/c/g [cc7a0af] (master)
-(i) gimme -help
-Usage of gimme:
+(i) s -help
+Usage of s:
   -d    Enable debug logging.
   -i    Search Google Images.
   -m    Search Google Maps.
@@ -29,23 +29,23 @@ Usage of gimme:
 
 ```
 # images, videos, youtube, web
-$ gimme -i -v -y '"Black Mirror Season 4" review'
+$ s -i -v -y '"Black Mirror Season 4" review'
 
 # maps, no web search
-$ gimme -m -w=false pizza
+$ s -m -w=false pizza
 ```
 
 ### Vim
 
-Put [this](gimme.vim) in your `.vimrc`.
+Put [this](s.vim) in your `.vimrc`.
 
 Now you can search from `vim` in visual, normal, and operator-pending modes :).
 
 ## Development
 
-1. Edit `gimme.go`.
+1. Edit `s.go`.
 1. `make build`.
-1. Play with `bin/gimme`.
+1. Play with `bin/s`.
 
 ## FAQ
 
